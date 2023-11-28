@@ -1,0 +1,59 @@
+@import '/src/styles/partials/variables';
+
+.video {
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        font-weight: 700;
+        margin: 1.5rem 1rem 0 1rem;
+        border-bottom: 1px solid $mercury;
+        padding-bottom: 1.5rem;
+
+    }
+
+    &__data-channel {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+    }
+
+    &__data-date {
+        color: $silver;
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $mercury;
+        padding-bottom: 1rem;
+        margin: 0 1rem 0 1rem;
+    }
+
+    &__data-icon {
+        padding: 1rem 0 1rem 0;
+    }
+
+    &__views-icon {
+        padding-right: 0.5rem
+    }
+
+    &__data-views {
+        color: $silver;
+    }
+
+    &__likes-icon {
+        padding-right: 0.5rem;
+    }
+
+    &__data-likes {
+        color: $silver;
+    }
+
+    &__data-right {
+        padding: 0 10% 0 0;
+    }
+
+    &__description {
+        margin: 1rem 1rem 0 1rem;
+    }
+}

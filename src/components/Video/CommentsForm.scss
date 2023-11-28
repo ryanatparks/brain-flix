@@ -1,0 +1,142 @@
+@import '../../styles/partials/mixin';
+@import '../../styles/partials/variables';
+
+#name {
+    padding: 0 0 0 0.5rem;
+    margin: 0.25rem 0 1.5rem 0;
+    height: 2.25rem;
+    border-radius: 4px;
+    border: solid 1px $mercury;
+    background-color: $background-alabaster;
+    @include tablet {
+        width: 31rem;
+    }
+}
+
+#comment-section {
+    @include tablet {
+        width: 37rem;
+        margin: auto;
+    }
+}
+
+#comment {
+    padding: 0.5rem 0 0 0.5rem;
+    margin: 0.25rem 0 0 0;
+    min-height: 6.75rem;
+    border-radius: 4px;
+    border: solid 1px $mercury;
+    background-color: $background-alabaster;
+    resize: none;
+    @include tablet {
+        min-height: 4rem;
+    }
+}
+
+#comment__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.comment {
+
+    &__container-wrap {
+        display: flex;
+        margin: 1rem 1rem 0 1rem;
+        border-bottom: 1px solid $mercury;
+    }
+
+    &__avatar-image {
+        @include avatar-circle;
+        margin: 1.5rem 1rem 0 0;
+        object-fit: cover;
+        object-position: 20% 50%;
+    }
+
+    &__label {
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+    }
+
+    &__button-container {
+        position: relative;
+    }
+    
+    &__button-icon {
+        position: absolute;
+        top: 1.5rem;
+        left: 0.5rem;
+    }
+
+    &__button {
+        @include label-font;
+        height: 2.5rem;
+        border-radius: 4px;
+        margin: 1rem 0 1rem 0;
+        color: $white;
+        background-color: $brainflix-blue;
+        border: $brainflix-blue;
+        width: 100%;
+        &:hover {
+            background-color: $brainflix-darkblue;
+            cursor: pointer;
+        }
+        @include tablet {
+            width: 9.375rem;
+            margin-left: auto;
+            font-size: 0.75rem;
+        }
+    }
+    
+    ::placeholder {
+        color: black;
+        opacity: 1;
+    }
+    
+    
+    &__card:first-of-type {
+        border-top: 2px solid $mercury;
+        
+    }
+        
+    &__card {
+        padding: 0.5rem 0 0 0;
+        margin: 0 1rem 0 1rem;
+        border-bottom: 2px solid $mercury;
+    } 
+    
+    &__avatar-circle {
+        @include avatar-circle;
+        margin: 1.15rem 0 0 1rem;
+        background-color: $mercury;
+    }
+    
+    &__subcontainer {
+        display: flex;
+    }
+    
+    &__subcontainer-column {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        padding: 0 0 0 1rem;
+    }
+    
+    &__subcontainer-row {
+        padding: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    &__date {
+        color: $silver;
+    }
+    
+    &__comment {
+        padding: 0 0 1rem 0;
+    }
+}

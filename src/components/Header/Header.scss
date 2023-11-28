@@ -5,9 +5,12 @@
 .header {
     width: 100%;
     overflow-x: hidden;
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
 
     &__logo {
-        padding: 1rem 0 1rem 0;
+        padding: 1rem 0 1rem 0;      
     }
 
     &__avatar-logo {

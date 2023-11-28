@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './VideoList.scss'
 import videoDetails from '../../data/video-details.json';
 
-
+//Component for list of videos in the queue
 function VideoList () {
 
 

@@ -9,5 +9,16 @@
         @media (min-width: $desktop) {
             @content;
         }
+    }
 
+@mixin avatar-circle {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+}
+
+@mixin label-font {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-weight: 700; 
 }
