@@ -44,7 +44,6 @@
     &__container-wrap {
         display: flex;
         margin: 1rem 1rem 0 1rem;
-        border-bottom: 1px solid $mercury;
     }
 
     &__avatar-image {
@@ -84,11 +83,11 @@
             background-color: $brainflix-darkblue;
             cursor: pointer;
         }
-        @include tablet {
-            width: 9.375rem;
-            margin-left: auto;
-            font-size: 0.75rem;
-        }
+        // @include tablet {
+        //     width: 9.375rem;
+        //     margin-left: auto;
+        //     font-size: 0.75rem;
+        // }
     }
     
     ::placeholder {
@@ -96,47 +95,4 @@
         opacity: 1;
     }
     
-    
-    &__card:first-of-type {
-        border-top: 2px solid $mercury;
-        
-    }
-        
-    &__card {
-        padding: 0.5rem 0 0 0;
-        margin: 0 1rem 0 1rem;
-        border-bottom: 2px solid $mercury;
-    } 
-    
-    &__avatar-circle {
-        @include avatar-circle;
-        margin: 1.15rem 0 0 1rem;
-        background-color: $mercury;
-    }
-    
-    &__subcontainer {
-        display: flex;
-    }
-    
-    &__subcontainer-column {
-        display: flex;
-        flex-direction: column;
-        width: 85%;
-        padding: 0 0 0 1rem;
-    }
-    
-    &__subcontainer-row {
-        padding: 1rem 0 1rem 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    &__date {
-        color: $silver;
-    }
-    
-    &__comment {
-        padding: 0 0 1rem 0;
-    }
 }

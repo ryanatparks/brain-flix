@@ -3,7 +3,7 @@ import avatarImage from '../../assets/images/Mohan-muruge.jpg';
 import './CommentsForm.scss'
 import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
-function Comments (props) {
+function CommentsForm (props) {
 
     return (
         <section className = "comment">
@@ -18,25 +18,9 @@ function Comments (props) {
                         </div>
                 </form>
             </div>
-            <div className = 'comment__section'>
-                <article className = 'comment-card'>
-                    <div className = 'comment__subcontainer'>
-                    <div className = 'comment__avatar-circle'>
-                        <div className = 'comment__subcontainer-column'>
-                        <div className = 'comment__subcontainer-row'>
-                                    <h3 className = 'comment__name'>{props.mainVideo.name}</h3>
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
         </section>
         )
     }
 
 
-export default Comments;
+export default CommentsForm;
