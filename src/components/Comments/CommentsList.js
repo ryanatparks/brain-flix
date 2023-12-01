@@ -5,7 +5,7 @@ function CommentsList (props) {
 return (
 
 <section className = 'comment__section'>
-    {props.commentsArray.map((content) => (
+    {props.currentVideo.comments.map((content) => (
         <CommentsCard 
             key = {content.id}
             name = {content.name}
