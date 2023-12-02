@@ -1,0 +1,38 @@
+@import '../../styles/partials/mixin';
+@import '../../styles/partials/variables';
+
+.video-card {
+
+    display: flex;
+    margin: 0 0 1rem 0;
+    @include tablet {
+        margin: 0 0 1.5rem 0;
+    }
+
+    &__image {
+        border-radius: 4px;
+        height: 4.1rem;
+        width: 7rem;
+        background-color: $mercury;
+        object-fit: cover;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        width: 55%;
+        margin: 0 0 0 1rem;
+        @include tablet {
+            width: 12.5rem;
+            flex-grow: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+}

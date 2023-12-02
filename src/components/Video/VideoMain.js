@@ -10,8 +10,8 @@ import VideoList from '../Video/VideoList'
 
 function VideoMain () {
 
-    //setting videos state to the videoDetails data
-    const [videos, setVideos] = useState(videoDetails);
+    //defining videos variable to the videoDetails json data
+    const videos = videoDetails;
     //setting the currentVideo to the first video in array.
     const [currentVideo, setCurrentVideo] = useState(videos[0]);
     //filtering nextVideos array to not include the currentVideo
@@ -20,9 +20,7 @@ function VideoMain () {
     const handleVideoSelect = video => {
         
         setCurrentVideo(video)
-        
     }   
-
 
     return (
     <main>

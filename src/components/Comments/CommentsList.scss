@@ -5,7 +5,7 @@
 .comment {
 
     &__section {
-        @include tablet {
+        @include desktop {
             width: 37rem;
             margin: auto;
         }
