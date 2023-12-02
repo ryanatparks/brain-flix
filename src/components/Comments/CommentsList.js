@@ -8,6 +8,7 @@ return (
     {props.currentVideo.comments.map((content) => (
         <CommentsCard 
             key = {content.id}
+            id = {content.id}
             name = {content.name}
             comment = {content.comment}
             timestamp = {content.timestamp}

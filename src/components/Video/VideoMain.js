@@ -10,34 +10,19 @@ import VideoList from '../Video/VideoList'
 
 function VideoMain () {
 
-    const [videoIndex, setVideoIndex] = useState(0);
-    
-    const [currentVideo, setCurrentVideo] = useState(videoDetails[videoIndex]);
+    //setting videos state to the videoDetails data
+    const [videos, setVideos] = useState(videoDetails);
+    //setting the currentVideo to the first video in array.
+    const [currentVideo, setCurrentVideo] = useState(videos[0]);
+    //filtering nextVideos array to not include the currentVideo
+    let nextVideos = videos.filter(video => video.id !== currentVideo.id);
 
-    const [nextVideos, setNextVideos] = useState(videoData.filter(video => video.id !== currentVideo.id));
+    const handleVideoSelect = video => {
+        
+        setCurrentVideo(video)
+        
+    }   
 
-
-    const handleVideoSelect = (selectedVideo) => {
-
-        const selectedIndex = nextVideos.findIndex((video) => video.id === selectedVideo.id)
-
-        //Move the current video back tot he nextVideos array
-        setNextVideos((prevNextVideos) => [currentVideo, ...prevNextVideos]);
-
-
-        //Filter out the selected video from the list of next videos
-        setNextVideos(prevNextVideos => prevNextVideos.filter(video => video.id !== selectedVideo.id));
-        ;
-
-        //Set the selected video as the current video
-        setCurrentVideo(selectedVideo);
-
-        setVideoIndex(selectedIndex);
-    };
-
-    //Sorting function based on original index
-    const sortNextVideos = (a, b) => a.index - b.index;
-    
 
     return (
     <main>
@@ -50,8 +35,6 @@ function VideoMain () {
         <VideoList 
             nextVideos = {nextVideos}
             handleVideoSelect = {handleVideoSelect}
-            sortNextVideos = {sortNextVideos}
-            videoIndex = {videoIndex}
         >
         </VideoList>
     </main>

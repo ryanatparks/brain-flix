@@ -1,6 +1,20 @@
+@import '../../styles/partials/mixin';
+@import '../../styles/partials/variables';
+
 .video-list {
+
+    &__header {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+        
+    }
+
     &__image {
         height: 2rem;
         width: 5rem;
     }
+
+    
 }
