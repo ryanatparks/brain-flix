@@ -7,19 +7,29 @@
     }
 
     &__card:first-of-type {
-        border-top: 2px solid $mercury;
-        
+        border-top: 1px solid $mercury; 
     }
         
     &__card {
         padding: 0.5rem 0 0 0;
         margin: 0 1rem 0 1rem;
-        border-bottom: 2px solid $mercury;
+        border-bottom: 1px solid $mercury;
         @include tablet {
             margin: 0 1.5rem 0 1.5rem;
         }
+        @include desktop {
+            margin: 0 0 0 1.5rem;
+            padding: 0.5rem 1.5rem 0 0;
+        }
     } 
 
+    &__card:last-of-type {
+        @include desktop {
+        padding-bottom: 3rem; 
+        border-bottom: none;
+    }
+    }
+    
     &__name {
         font-size: 1rem;
     }

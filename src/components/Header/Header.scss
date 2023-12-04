@@ -6,13 +6,16 @@
     width: 100%;
     overflow-x: hidden;
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
+   
     @include tablet {
         display: flex;
         justify-content: space-between;
         margin: 0 1.5rem 0 1.5rem;
         width: calc(100% - 3rem);
+    }
+    @include desktop {
+        width: 63.75rem;
+        margin: auto;
     }
 
     &__nav-right {
@@ -95,10 +98,15 @@
         background-color: $brainflix-blue;
         border: $brainflix-blue;
         width: calc(100% - 2rem);
+
         @include tablet {
-        width: 9.375rem;
-        }
+            width: 9.375rem;
+            }
+        &:hover {
+            background-color: $brainflix-darkblue;
+            cursor: pointer;
     }
+}
 
     &__upload-button-icon {
         position: absolute;
@@ -114,7 +122,11 @@
     border: solid 1px $mercury;
     background-color: $background-alabaster;
     padding: 0 0.75rem 0 2.5rem;
-    box-sizing: border-box
+    box-sizing: border-box;
+    outline: none;
+    &:focus {
+        border: 2px solid $brainflix-blue 
+    }
     }
 
     

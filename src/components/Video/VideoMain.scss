@@ -5,7 +5,7 @@
 
 .video {
     &__container {
-        
+        display: flex;
         width: 100%;
         background-color: $brainflix-darkblack;
 
@@ -15,13 +15,46 @@
         }
     }
 
+    &__subcontainer {
+        @include desktop {
+            display: flex;
+            width: 63.75rem;
+            margin: auto;
+        }
+    }
+
+    &__subcontainer-left {
+        @include desktop {
+            border-right: 1px solid $mercury;
+        }
+    }
+
     &__main {
         padding: 0 0 1.5rem 0;
 
         &[poster] {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
+            object-fit: fill;
+            max-height: 11.05rem;
+            max-width: 35rem;
+            height: auto;
+            width: auto;
+            margin: auto;
+
+
+            @include tablet {
+            object-fit: fill;
+            max-height: 25.26rem;
+            max-width: 80rem;
+            height: auto;
+            width: auto;
+            margin: auto;
+            }    
+
+        @include desktop {
+            object-fit: fill;
+            max-height: 28.42rem;
+            max-width: 90rem;
+        }
         }
     }
 }

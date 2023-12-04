@@ -27,14 +27,18 @@ function VideoMain () {
         <div className = 'video__container'>
             <video className = 'video__main' controls poster = {currentVideo.image}></video>
         </div>
-        <VideoDetails currentVideo = {currentVideo}></VideoDetails>
-        <CommentsForm currentVideo = {currentVideo}></CommentsForm>
-        <CommentsList currentVideo = {currentVideo}></CommentsList>
+        <div className = 'video__subcontainer'>
+        <div className = 'video__subcontainer-left'>
+            <VideoDetails currentVideo = {currentVideo}></VideoDetails>
+            <CommentsForm currentVideo = {currentVideo}></CommentsForm>
+            <CommentsList currentVideo = {currentVideo}></CommentsList>
+        </div>
         <VideoList 
             nextVideos = {nextVideos}
             handleVideoSelect = {handleVideoSelect}
         >
         </VideoList>
+        </div>
     </main>
     );
     }

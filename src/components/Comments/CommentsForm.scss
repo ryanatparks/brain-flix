@@ -22,19 +22,25 @@
 
 #comment {
     padding: 0.5rem 0 0 0.5rem;
-    margin: 0.25rem 0 0 0;
+    margin: 0.5rem 0 0.5rem 0;
     min-height: 6.75rem;
     border-radius: 4px;
     border: solid 1px $mercury;
     background-color: $background-alabaster;
     resize: none;
+    outline: none;
+
     @include tablet {
         min-height: 0;
         height: 2.5rem;
-        margin: 0 1.5rem 0 0;
+        margin: 0.5rem 1.5rem 0 0;
         padding: 0 0 0 1rem;
         flex-grow: 1;
         line-height: 2.5rem;
+    }
+
+    &:focus {
+        border: 2px solid $brainflix-blue;
     }
 }
 
@@ -49,6 +55,9 @@
     margin: 1rem 0 0 0;
     @include tablet {
         margin: 2.25rem 0 1.5rem 0;
+    }
+    @include desktop {
+        margin: 3rem 0 1.5rem 0;
     }
 
     &__count {
@@ -103,6 +112,9 @@
         position: absolute;
         top: 1.5rem;
         left: 0.5rem;
+        @include tablet {
+            top: 1.05rem;
+        }
     }
 
     &__button {
@@ -120,12 +132,9 @@
         }
         @include tablet {
             width: 9.375rem;
+            margin: 0.5rem 0 0 0;
             }
-        // @include tablet {
-        //     width: 9.375rem;
-        //     margin-left: auto;
-        //     font-size: 0.75rem;
-        // }
+    
     }
     
     ::placeholder {

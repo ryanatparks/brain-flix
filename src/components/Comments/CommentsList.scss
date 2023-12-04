@@ -2,12 +2,4 @@
 @import '../../styles/partials/variables';
 
 
-.comment {
 
-    &__section {
-        @include desktop {
-            width: 37rem;
-            margin: auto;
-        }
-    }
-}
