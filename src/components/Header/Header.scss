@@ -127,6 +127,9 @@
     &:focus {
         border: 2px solid $brainflix-blue 
     }
+    &:invalid {
+        border: 2px solid #D22D2D;
+    }
     }
 
     
