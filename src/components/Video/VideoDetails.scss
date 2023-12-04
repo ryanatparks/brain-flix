@@ -1,0 +1,97 @@
+@import '/src/styles/partials/variables';
+@import '../../styles/partials/mixin';
+
+.video {
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        font-weight: 700;
+        margin: 1.5rem 1rem 0 1rem;
+        border-bottom: 1px solid $mercury;
+        padding-bottom: 1.5rem;
+        @include tablet {
+            font-size: 2.063rem;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin: 2.25rem 1.5rem 0 1.5rem;
+        }
+    }
+
+    &__data-channel {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        padding: 1rem 0 1rem 0;
+    }
+
+    &__data-date {
+        color: $silver;
+        @include tablet {
+            padding: 1rem 0 1rem 3rem;
+        }
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $mercury;
+        padding-bottom: 1rem;
+        margin: 0 1rem 0 1rem;
+        @include tablet {
+            padding-bottom: 0;
+            margin: 0 1.5rem 0 1.5rem;
+        }
+        @include desktop {
+            margin: 0 0 0 1.5rem;
+            padding: 0 1.5rem 0 0;
+        }
+    }
+
+    &__data-icon {
+        padding: 1rem 0 1rem 0;
+    }
+
+    &__views-icon {
+        padding-right: 0.5rem
+    }
+
+    &__data-views {
+        color: $silver;
+    }
+
+    &__likes-icon {
+        padding-right: 0.5rem;
+        @include tablet {
+            padding: 0 0.5rem 0 3rem;
+        }
+    }
+
+    &__data-likes {
+        color: $silver;
+        @include tablet {
+            padding: 1rem 0 0 0rem;
+        }
+    }
+
+    &__data-left {
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__data-right {
+        padding: 0 10% 0 0;
+        @include tablet {
+            display: flex;
+            padding: 0;
+        }
+    }
+
+    &__description {
+        margin: 1rem 1rem 0 1rem;
+        @include tablet {
+            margin: 2.25rem 1.5rem 0 1.5rem;
+        }
+    }
+}

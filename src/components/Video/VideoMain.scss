@@ -1,0 +1,78 @@
+@import '../../styles/partials/mixin';
+@import '../../styles/partials/variables';
+@import '../../styles/partials/font.scss';
+
+
+.video {
+    &__container {
+        display: flex;
+        width: 100%;
+        background-color: $brainflix-darkblack;
+        position: relative;
+        padding-bottom: 56.25%;
+
+
+        &::before {
+            display: block;
+            padding-top: 56.25%;
+        }
+    }
+
+    &__subcontainer {
+        @include desktop {
+            display: flex;
+            width: 63.75rem;
+            margin: auto;
+        }
+    }
+
+    &__subcontainer-left {
+        @include desktop {
+            border-right: 1px solid $mercury;
+        }
+    }
+
+    &__main {
+        position: absolute;
+        padding: 0 0 1.5rem 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        max-height: 25rem;
+
+        @include tablet {
+            max-height: 40rem;
+        }
+
+        @include desktop {
+            max-height: 60rem;
+        }
+
+        &[poster] {
+            
+        //     max-height: 11.05rem;
+        //     max-width: 35rem;
+        //     height: auto;
+        //     width: auto;
+        //     margin: auto;
+
+
+        //     @include tablet {
+        //     object-fit: fill;
+        //     max-height: 25.26rem;
+        //     max-width: 80rem;
+        //     height: auto;
+        //     width: auto;
+        //     margin: auto;
+        //     }    
+
+        // @include desktop {
+        //     object-fit: fill;
+        //     max-height: 28.42rem;
+        //     max-width: 90rem;
+        }
+        }
+}
