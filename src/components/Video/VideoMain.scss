@@ -50,29 +50,5 @@
         @include desktop {
             max-height: 60rem;
         }
-
-        &[poster] {
-            
-        //     max-height: 11.05rem;
-        //     max-width: 35rem;
-        //     height: auto;
-        //     width: auto;
-        //     margin: auto;
-
-
-        //     @include tablet {
-        //     object-fit: fill;
-        //     max-height: 25.26rem;
-        //     max-width: 80rem;
-        //     height: auto;
-        //     width: auto;
-        //     margin: auto;
-        //     }    
-
-        // @include desktop {
-        //     object-fit: fill;
-        //     max-height: 28.42rem;
-        //     max-width: 90rem;
-        }
-        }
+}
 }
