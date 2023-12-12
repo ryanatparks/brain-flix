@@ -32,7 +32,6 @@ return (
                     <button className = "upload__form-cancel-button-mobile">CANCEL</button>
                     </Link>
                 </div>
-                        
         </form>
         </div>
     </section>
