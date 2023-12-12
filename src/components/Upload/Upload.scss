@@ -1,0 +1,219 @@
+@import '../../styles/partials/mixin';
+@import '../../styles/partials/variables';
+@import '../../styles/partials/font.scss';
+
+.upload {
+
+    &__heading-container {
+        border-top: 1.5px solid $mercury;
+    }
+
+    &__heading {
+        padding: 2rem 1rem 0 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+        @include tablet {
+            padding: 2rem 0 0 1.5rem;
+            font-size: 2.063rem;
+            font-weight: 700;
+        }
+        @include desktop {
+        width: 63.75rem;
+        padding: 2rem 0 1.5rem 0;
+        margin: auto;
+        }
+    }
+
+    &__subcontainer {
+        margin: 0 1rem 0 1rem;
+        padding: 1.5rem 0 0 0;
+        @include tablet {
+            margin: 1.5rem 1.5rem 0 1.5rem;
+            border-top: 1.5px solid $mercury;
+        }
+        @include desktop {
+        width: 63.75rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    }
+
+    &__thumbnail-and-inputs {
+        @include desktop {
+        display: flex;
+        border-bottom: 1.5px solid $mercury;
+
+        }
+    }
+
+    &__video-thumbnail-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__video-thumbnail-label {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+    }
+
+    &__video-thumbnail {
+        width: 100%;
+        border-radius: 4px;
+        margin-top: 0.25rem;
+        background-color: $mercury;
+
+        @include tablet {
+        width: 24rem;
+        height: 13.5rem;
+        }
+        @include desktop {
+            border-bottom: 1.5px solid $mercury;
+        }
+    }
+
+    &__form-inputs {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 0 0;
+        @include desktop {
+            flex-grow: 1;
+            margin: 0 0 0 1rem;
+        }
+    }
+
+    &__form-title-label {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+    }    
+
+    &__form-description-label {
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        @include desktop {
+        flex-direction: column;
+         flex-grow: 1;
+         padding: 0 0 0 1rem;
+         margin: 0;
+
+        };
+    }
+
+    &__form-publish-button-icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        @include tablet {
+            left: auto;
+            right: 7.5rem;
+            top: 2rem;
+        }
+}
+
+    &__form-button-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include tablet {
+            flex-direction: row;
+            justify-content: right;
+            border-top: 1.5px solid $mercury;
+            padding-top: 1.5rem;
+        }
+        @include desktop {
+            border-top: none;
+        }
+    }
+
+    &__form-cancel-button {
+        display: none;
+        @include tablet {
+            display: block;
+            height: 2.5rem;
+        width: 9.375rem;
+        font-weight: 700;
+        color: $brainflix-blue;
+        background-color: $white;
+        border: $white;
+        }
+    }
+
+    &__form-publish-button {
+        height: 2.5rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        color: $white;
+        font-weight: 700;
+        background-color: $brainflix-blue;
+        border: $brainflix-blue;
+        @include tablet {
+            width: 9.375rem;
+        }
+        &:hover {
+            background-color: $brainflix-darkblue;
+            cursor: pointer;
+    }
+    }
+    &__form-cancel-button-mobile {
+        height: 2.5rem;
+        width: 100%;
+        color: $brainflix-blue;
+        background-color: $white;
+        border: $white;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+    }
+}
+
+#upload__title-input {
+    padding: 0 0 0 0.5rem;
+    margin: 0.25rem 0 1.5rem 0;
+    height: 2.25rem;
+    border-radius: 4px;
+    border: solid 1px $mercury;
+    background-color: $background-alabaster;
+
+}
+
+#upload__description-input {
+    padding: 0.5rem 0 0 0.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+    min-height: 5.75rem;
+    border-radius: 4px;
+    border: solid 1px $mercury;
+    background-color: $background-alabaster;
+    resize: none;
+    outline: none;
+    @include desktop {
+        margin: 0.5rem 0 1.5rem 0;
+        min-height: 7.25rem;
+    }
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+    font-family: 'Avenir';
+}
+
+}
