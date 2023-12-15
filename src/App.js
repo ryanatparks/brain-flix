@@ -1,5 +1,5 @@
 import Header from './components/Header/Header';
-import VideoMain from './components/Video/VideoMain/VideoMain';
+import VideoMain from './pages/MainPage/MainPage';
 import Upload from './pages/Upload/Upload';
 import './App.scss';
 import './components/Comments/CommentsCard/CommentsCard.scss';
@@ -8,7 +8,7 @@ import './components/Comments/CommentsList/CommentsList.scss';
 import './components/Header/Header.scss';
 import './components/Video/VideoDetails/VideoDetails.scss';
 import './components/Video/VideoList/VideoList.scss';
-import './components/Video/VideoMain/VideoMain.scss';
+import './pages/MainPage/MainPage.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import axios from 'axios';

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './VideoDetails.scss';
 import viewIcon from '../../../assets/Icons/views.svg';
 import likeIcon from '../../../assets/Icons/likes.svg';
