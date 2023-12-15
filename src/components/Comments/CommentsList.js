@@ -1,11 +1,11 @@
 import CommentsCard from '../Comments/CommentsCard'
 
-function CommentsList (props) {
+function CommentsList ({currentVideo}) {
 
 return (
 
 <section className = 'comment__section'>
-    {props.currentVideo.comments.map((content) => (
+    {currentVideo.comments?.map((content) => (
         <CommentsCard 
             key = {content.id}
             id = {content.id}

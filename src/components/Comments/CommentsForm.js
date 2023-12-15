@@ -3,11 +3,11 @@ import avatarImage from '../../assets/images/Mohan-muruge.jpg';
 import './CommentsForm.scss'
 import addCommentIcon from '../../assets/Icons/add_comment.svg'
 
-function CommentsForm (props) {
+function CommentsForm ({currentVideo}) {
 
     return (
         <section className = "comment">
-            <span className = "comment__count">{props.currentVideo.comments.length} Comments</span>
+            <span className = "comment__count">{currentVideo.comments?.length} Comments</span>
             <div className = "comment__container-wrap">
                 <img className =  'comment__avatar-image' src = {avatarImage}></img>
                 <form id = 'comment__form'>

@@ -14,7 +14,6 @@ function CommentsCard (props) {
         let monthDateYear = (month) + '/' + day + "/" + year; 
     
         return monthDateYear;
-
     }
 
     const formattedDate = convertDate()
@@ -26,10 +25,10 @@ return (
         </div>
             <div className = 'comment__subcontainer-column'>
                 <div className = 'comment__subcontainer-row'>
-                    <h3 className = 'comment__name'>{props.name}</h3>
+                    <h3 className = 'comment__name'>{props?.name}</h3>
                     <span className = 'comment__date'>{formattedDate}</span>
                 </div>
-                <p className ="comment__comment">{props.comment}</p>
+                <p className ="comment__comment">{props?.comment}</p>
                 </div>
             </div>
     </article>
