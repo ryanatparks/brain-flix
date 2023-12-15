@@ -125,7 +125,7 @@
 
     &__form-button-container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: relative;
         @include tablet {
             flex-direction: row;
@@ -138,8 +138,17 @@
         }
     }
 
+    &__cancel-link {
+        text-decoration: none;
+    }
+
     &__form-cancel-button {
-        display: none;
+        height: 2.5rem;
+        width: 100%;
+        color: $brainflix-blue;
+        background-color: $white;
+        border: $white;
+        margin-bottom: 1.5rem;
         @include tablet {
             display: block;
             height: 2.5rem;
@@ -149,6 +158,9 @@
         background-color: $white;
         border: $white;
         }
+        &:hover {
+            cursor: pointer;
+    }
     }
 
     &__form-publish-button {
@@ -167,22 +179,6 @@
             cursor: pointer;
     }
     }
-    &__form-cancel-button-mobile {
-        height: 2.5rem;
-        width: 100%;
-        color: $brainflix-blue;
-        background-color: $white;
-        border: $white;
-        margin-bottom: 1.5rem;
-
-        @include tablet {
-            display: none;
-        }
-
-        &:hover {
-            cursor: pointer;
-    }
-}
 
 #upload__title-input {
     padding: 0 0 0 0.5rem;
@@ -214,4 +210,4 @@
     opacity: 1;
     font-family: 'Avenir';
 }
-}
+    };

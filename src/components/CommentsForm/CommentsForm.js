@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import avatarImage from '../../assets/images/Mohan-muruge.jpg';
 import './CommentsForm.scss'
 import addCommentIcon from '../../assets/Icons/add_comment.svg'

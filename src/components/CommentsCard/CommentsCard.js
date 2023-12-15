@@ -1,7 +1,5 @@
 import './CommentsCard.scss'
 
-
-
 function CommentsCard (props) {
 
     function convertDate() {
@@ -33,10 +31,6 @@ return (
             </div>
     </article>
 )
-
 }
-
-
-
 
 export default CommentsCard;

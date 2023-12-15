@@ -25,12 +25,11 @@ return (
                 </div>
                 </div>
                 <div className = "upload__form-button-container">
+                <Link className = 'upload__cancel-link' to='/'>
                     <button className = "upload__form-cancel-button">CANCEL</button>
+                    </Link>
                     <button className = "upload__form-publish-button">PUBLISH</button>
                     <img className = "upload__form-publish-button-icon" src = {publishButtonIcon}></img>
-                    <Link to='/'>
-                    <button className = "upload__form-cancel-button-mobile">CANCEL</button>
-                    </Link>
                 </div>
         </form>
         </div>

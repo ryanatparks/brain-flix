@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function VideoCard ({video, handleVideoSelect}) {
 
     return (
-        <Link key = {video.id} to= {`/${video.id}`}>
+        <Link className = 'video-card__link' key = {video.id} to= {`/${video.id}`}>
         <div className = 'video-card' onClick={() => handleVideoSelect(video)}>
             <img className = 'video-card__image' src = {video.image}></img>
                 <div className = 'video-card__details'>

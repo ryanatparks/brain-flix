@@ -2,12 +2,10 @@ import { useState, useEffect } from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import './VideoMain.scss'
-import videoDetails from '../../data/video-details.json';
-import videoData from '../../data/videos.json';
-import VideoDetails from '../../components/Video/VideoDetails';
-import CommentsForm from '../Comments/CommentsForm';
-import CommentsList from '../Comments/CommentsList';
-import VideoList from '../Video/VideoList';
+import VideoDetails from '../VideoDetails/VideoDetails';
+import CommentsForm from '../CommentsForm/CommentsForm';
+import CommentsList from '../CommentsList/CommentsList';
+import VideoList from '../VideoList/VideoList';
 
 
 function VideoMain ({videoList}) {

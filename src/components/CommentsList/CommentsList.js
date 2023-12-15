@@ -1,4 +1,4 @@
-import CommentsCard from '../Comments/CommentsCard'
+import CommentsCard from '../CommentsCard/CommentsCard'
 
 function CommentsList ({currentVideo}) {
 

@@ -1,8 +1,6 @@
-import { useState, useEffect } from 'react'
 import './VideoList.scss'
-import videoDetails from '../../data/video-details.json';
-import VideoCard from '../Video/VideoCard'
-import { Link } from "react-router-dom";
+import VideoCard from '../VideoCard/VideoCard';
+
 
 //Component for list of videos in the queue
 function VideoList({ videoList, currentVideo, handleVideoSelect }) {
