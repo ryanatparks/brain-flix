@@ -3,8 +3,8 @@ import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import './VideoMain.scss'
 import VideoDetails from '../VideoDetails/VideoDetails';
-import CommentsForm from '../CommentsForm/CommentsForm';
-import CommentsList from '../CommentsList/CommentsList';
+import CommentsForm from '../../Comments/CommentsForm/CommentsForm';
+import CommentsList from '../../Comments/CommentsList/CommentsList';
 import VideoList from '../VideoList/VideoList';
 
 

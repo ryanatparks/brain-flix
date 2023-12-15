@@ -1,6 +1,6 @@
-import avatarImage from '../../assets/images/Mohan-muruge.jpg';
+import avatarImage from '../../../assets/images/Mohan-muruge.jpg';
 import './CommentsForm.scss'
-import addCommentIcon from '../../assets/Icons/add_comment.svg'
+import addCommentIcon from '../../../assets/Icons/add_comment.svg'
 
 function CommentsForm ({currentVideo}) {
 
@@ -14,7 +14,7 @@ function CommentsForm ({currentVideo}) {
                     <div className = 'comment__input-button-container'>
                     <textarea id = 'comment' placeholder = 'Add a new comment' name = 'comments'></textarea>
                         <div className = "comment__button-container">
-                            <img className = "comment__button-icon" src = {addCommentIcon}></img>
+                            <img className = "comment__button-icon" src = {addCommentIcon} alt = 'Add comment button icon'></img>
                             <button className = "comment__button">COMMENT</button>
                         </div>
                     </div>    

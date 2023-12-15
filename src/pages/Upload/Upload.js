@@ -29,7 +29,7 @@ return (
                     <button className = "upload__form-cancel-button">CANCEL</button>
                     </Link>
                     <button className = "upload__form-publish-button">PUBLISH</button>
-                    <img className = "upload__form-publish-button-icon" src = {publishButtonIcon}></img>
+                    <img className = "upload__form-publish-button-icon" src = {publishButtonIcon} alt = 'Publish button icon'></img>
                 </div>
         </form>
         </div>

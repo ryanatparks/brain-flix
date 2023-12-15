@@ -1,14 +1,14 @@
 import Header from './components/Header/Header';
-import VideoMain from './components/VideoMain/VideoMain';
-import Upload from './components/Upload/Upload';
+import VideoMain from './components/Video/VideoMain/VideoMain';
+import Upload from './pages/Upload/Upload';
 import './App.scss';
-import './components/CommentsCard/CommentsCard.scss';
-import './components/CommentsForm/CommentsForm.scss';
-import './components/CommentsList/CommentsList.scss';
+import './components/Comments/CommentsCard/CommentsCard.scss';
+import './components/Comments/CommentsForm/CommentsForm.scss';
+import './components/Comments/CommentsList/CommentsList.scss';
 import './components/Header/Header.scss';
-import './components/VideoDetails/VideoDetails.scss';
-import './components/VideoList/VideoList.scss';
-import './components/VideoMain/VideoMain.scss';
+import './components/Video/VideoDetails/VideoDetails.scss';
+import './components/Video/VideoList/VideoList.scss';
+import './components/Video/VideoMain/VideoMain.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import axios from 'axios';
