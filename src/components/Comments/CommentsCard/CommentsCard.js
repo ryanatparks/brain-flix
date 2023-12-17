@@ -2,6 +2,7 @@ import './CommentsCard.scss'
 
 function CommentsCard (props) {
 
+    //Converting timestamp data to a MM/DD/YYYY date format
     function convertDate() {
         const fullDate = new Date(props.timestamp)
     

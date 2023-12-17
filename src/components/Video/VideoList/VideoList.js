@@ -2,15 +2,15 @@ import './VideoList.scss'
 import VideoCard from '../VideoCard/VideoCard';
 
 
-//Component for list of videos in the queue
+//Component for list of videos in the Next Videos section
 function VideoList({ videoList, currentVideo, handleVideoSelect }) {
     
     
     return (
         <main>
             <div className='video-list__container'>
-                <h1 className='video-list__header'>NEXT VIDEOS</h1>
-                {videoList?.filter((video) => video.id !== currentVideo.id)
+                <h1 className='video-list__header'>NEXT VIDEOS</h1>               
+                {videoList?.filter((video) => video.id !== currentVideo.id) //filtering videoList array to not include the currentVideo by id
                 ?.map((video) => (
                     <VideoCard
                         key={video.id}

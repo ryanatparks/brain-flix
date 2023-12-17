@@ -8,17 +8,16 @@ import CommentsList from '../../components/Comments/CommentsList/CommentsList';
 import VideoList from '../../components/Video/VideoList/VideoList';
 
 
-function VideoMain ({videoList}) {
+function VideoMain ({videoList, apiKey}) {
 
     const params = useParams()
-
+    //setting videoId as the first video id, or the videoId from params 
     const videoId = params.videoId ? params.videoId: videoList[0]?.id;
 
     // setting the currentVideo using id of first video
     const [currentVideo, setCurrentVideo] = useState([]);
 
-    const apiKey = 'ff1db921-2d5e-4c5f-9b58-cf9c48a96ff5'
-
+    //setting up useEffect to get Video details through get request, and have it run again when videoId is updated
     useEffect(()=> {
         if (!videoId) {
             return;
@@ -26,14 +25,12 @@ function VideoMain ({videoList}) {
         axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`)
         .then(response => {
             setCurrentVideo(response.data)
+            window.scrollTo(0, 0)
         })
         .catch(error => {
             console.error('Error fetching data', error);
           })
     }, [videoId])
-
-    //filtering nextVideos array to not include the currentVideo
-    // let nextVideos = props.videoList?.filter(video => video.id !== currentVideo.id)
 
     const handleVideoSelect = video => {
         

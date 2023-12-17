@@ -26,7 +26,7 @@ function VideoDetails ({currentVideo}) {
             <div className = 'video__data'>
                 <div className = 'video__data-left'>
                     <h3 className = 'video__data-channel'>By {currentVideo?.channel}</h3>
-                    <span class = 'video__data-date'>{formattedDate}</span>
+                    <span className = 'video__data-date'>{formattedDate}</span>
                 </div>
                 <div className = 'video__data-right'>
                     <div className = 'video__data-icon'>

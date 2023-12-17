@@ -13,7 +13,7 @@ function Header(props) {
         </Link>
         <div className = "header__nav-right">
         <section className = "header__search-section">
-            <div class = "header__search-container">
+            <div className = "header__search-container">
                 <form className = 'header__form-field'>
                     <input id = 'search-bar' type="text" placeholder = "Search"></input>
                 </form>
