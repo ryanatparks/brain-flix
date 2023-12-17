@@ -40,9 +40,6 @@ function VideoDetails ({currentVideo}) {
                 </div>
             </div>
         <p className = 'video__description'>{currentVideo?.description}</p>
-
-
-
     </section>
     );
 }

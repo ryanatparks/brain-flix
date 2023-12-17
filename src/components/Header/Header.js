@@ -6,7 +6,7 @@ import uploadButtonIcon from '../../assets/Icons/upload.svg';
 import { Link } from "react-router-dom";
 
 
-function Header(props) {
+function Header() {
     return <header className = 'header'>
         <Link to={'/'}>
         <img className = "header__logo" src = {logo} alt = 'Brainflix Logo'></img>

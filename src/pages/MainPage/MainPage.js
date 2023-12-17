@@ -30,13 +30,7 @@ function VideoMain ({videoList, apiKey}) {
         .catch(error => {
             console.error('Error fetching data', error);
           })
-    }, [videoId])
-
-    const handleVideoSelect = video => {
-        
-        setCurrentVideo(video)
-        console.log(videoList)
-    }   
+    }, [videoId]) 
 
     return (
     <main>
@@ -52,7 +46,6 @@ function VideoMain ({videoList, apiKey}) {
         <VideoList 
             currentVideo = {currentVideo} 
             videoList = {videoList}
-            handleVideoSelect = {handleVideoSelect}
         >
         </VideoList>
         </div>

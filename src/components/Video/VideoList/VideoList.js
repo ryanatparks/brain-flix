@@ -3,7 +3,7 @@ import VideoCard from '../VideoCard/VideoCard';
 
 
 //Component for list of videos in the Next Videos section
-function VideoList({ videoList, currentVideo, handleVideoSelect }) {
+function VideoList({ videoList, currentVideo }) {
     
     
     return (
@@ -19,7 +19,6 @@ function VideoList({ videoList, currentVideo, handleVideoSelect }) {
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
-                        handleVideoSelect={handleVideoSelect}
                     />
                 ))}
             </div>
