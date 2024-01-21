@@ -1,19 +1,42 @@
-import videoThumbnail from '../../assets/images/Upload-video-preview.jpg';
-import publishButtonIcon from '../../assets/Icons/publish.svg';
+
 import './Upload.scss'
-import { Link, useNavigate, redirect } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios'
 
 function Upload () {
 
 const navigate = useNavigate();
 
+//State variables to store input values
+// const [title, setTitle] = useState('');
+// const [description, setDescription] = useState('');
+
 //HandleFormSubmit function to prevent refresh on form submission, alert user form was submitted, and navigate to home
 const handleFormSubmit = (e) => { 
     e.preventDefault()
-    alert('Form successfully submitted');
-    navigate("/");
 
+    const title = e.target.title.value
+    const description = e.target.description.value
+
+    console.log(title, description)
+    axios.post('http://localhost:8080/videos', 
+    { title: title, 
+    description: description})
+    .then(() => {
+        console.log("Video uploaded successfully")
+
+
+        alert('Form successfully submitted');
+        navigate("/");  
+    })
+    .catch((error) => {
+        console.error ("Error uploading video", error)
+        alert('Error uploading video')
+    })
 }
+
+
 
 return (
     <section className = "upload">
@@ -25,21 +48,21 @@ return (
                 <div className = "upload__thumbnail-and-inputs">
                 <div className = 'upload-video-thumbnail-container'>
                     <p className = "upload__video-thumbnail-label">VIDEO THUMBNAIL</p>
-                    <img className = "upload__video-thumbnail" src = {videoThumbnail} alt = "POV of person riding a bicycle"></img>
+                    <img className = "upload__video-thumbnail" src = 'http://localhost:8080/images/Upload-video-preview.jpg' alt = "POV of person riding a bicycle"></img>
                 </div>
                 <div className = "upload__form-inputs">
                     <label className = "upload__form-title-label">TITLE YOUR VIDEO</label>
-                    <input id = "upload__title-input" placeholder='Add a title to your video' required></input>
+                    <input id = "upload__title-input" name = "title" placeholder='Add a title to your video' required></input>
                     <label className = "upload__form-description-label">ADD A VIDEO DESCRIPTION</label>
-                    <textarea id = "upload__description-input" placeholder='Add a description to your video' required></textarea>
+                    <textarea id = "upload__description-input" name = "description" placeholder='Add a description to your video' required></textarea>
                 </div>
                 </div>
                 <div className = "upload__form-button-container">
                 <Link className = 'upload__cancel-link' to='/'>
                     <button className = "upload__form-cancel-button">CANCEL</button>
                     </Link>
-                    <button className = "upload__form-publish-button">PUBLISH</button>
-                    <img className = "upload__form-publish-button-icon" src = {publishButtonIcon} alt = 'Publish button icon'></img>
+                    <button type = 'submit' className = "upload__form-publish-button">PUBLISH</button>
+                    <img className = "upload__form-publish-button-icon" src = 'http://localhost:8080/Icons/publish.svg' alt = 'Publish button icon'></img>
                 </div>
         </form>
         </div>
