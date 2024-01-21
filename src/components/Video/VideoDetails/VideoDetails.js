@@ -1,6 +1,4 @@
 import './VideoDetails.scss';
-import viewIcon from '../../../assets/Icons/views.svg';
-import likeIcon from '../../../assets/Icons/likes.svg';
 
 
 function VideoDetails ({currentVideo}) {
@@ -30,11 +28,11 @@ function VideoDetails ({currentVideo}) {
                 </div>
                 <div className = 'video__data-right'>
                     <div className = 'video__data-icon'>
-                        <img className = 'video__views-icon' src = {viewIcon}></img>
+                        <img className = 'video__views-icon' src = 'http://localhost:8080/Icons/views.svg' alt = 'Video views icon'></img>
                         <span className = 'video__data-views'>{currentVideo?.views}</span>
                     </div>
                     <div className = 'video__data-likes'>
-                        <img className = 'video__likes-icon' src = {likeIcon}></img>
+                        <img className = 'video__likes-icon' src = 'http://localhost:8080/Icons/likes.svg' alt = "video likes icon"></img>
                         <span className = 'video__data-likes'>{currentVideo?.likes}</span>
                     </div>
                 </div>
